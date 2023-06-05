@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"  >
+
+    <title>Практическая работа № 3, Рамазанов П.А.</title>
+</head>
+
+<body>
+    <header>
+        <div class="hello">
+            <form>
+                <p>
+                    <label>Напишите Ваше имя</label>
+                    <input type="text" id="name">
+                    <input type="button" value="Отправить" onclick="sendForm()">
+                </p>
+            </form>
+            <p id="hello"></p>
+            <p id="yourName"></p>
+        </div>
+    </header>
+    <main>
+        <div class="texts">
+            <h2>
+                JavaScript — это язык программирования, который используют для написания frontend- и backend-частей сайтов, а также мобильных приложений. <br />
+                JavaScript — это лучший друг HTML и CSS. <br />
+                HTML задает разметку сайта, CSS отвечает за внешний вид, а JavaScript все это оживляет. <br />
+                Сейчас JavaScript — единственный язык программирования для браузеров.  <br />
+                Он работает под Windows, macOS, Linux и на мобильных платформах, то есть везде.<br />
+                В JS можно работать с переменными, объектами, функциями, условиями, математическими и логическими операторами и так далее.<br />
+                Давайте разберем это на примере реальных возможностей.
+            </h2>
+        </div>
+        <div class="nav" id="nav">
+            <ul>
+                <li><input type="button" class="button" value="S треугольника" onclick="showTriangle()"></li>
+                <li><input type="button" class="button" value="Сравнение строк" onclick="showString()"></li>
+                <li><input type="button" class="button" value="Массив" onclick="showMass()"></li>
+                <li><input type="button" class="button" value="Таймер" onclick="showTimer()"></li>
+                <li><input type="button" class="button" value="Заставка" onclick="showMiniature()"></li>
+                <li><input type="button" class="button" value="Тестирование" onclick="showTest()"></li>
+            </ul>
+        </div>
+        <div class="content" style="visibility: hidden;" id="Triangle">
+            <h4>S треугольника</h4>
+            <form name="form">
+                Сторона 1 <input type="text" size="8" maxlength="8" name="st1"> Сторона 2 <input type="text" size="8" maxlength="8" name="st2"> Сторона 3 <input type="text" size="8" maxlength="8" name="st3"><br><br>
+                <input type="button" value="Вычислить" onClick="areaOfTriangle(form);">
+                <input type="reset" value="Отменить"> Результат <input type="text" size="8" maxlength="8" name="res">
+            </form>
+            <p id="answer"></p>
+        </div>
+        <div class="content" style="visibility: hidden;" id="String">
+            <h4>Сравним строки</h4>
+            <form>
+                <p>Строка 1
+                    <Input type="text" id="string1"></Input>
+                </p>
+                <p>Строка 2
+                    <Input type="text" id="string2"></Input>
+                </p>
+                <p>
+                    <input type="button" value="Сравнить" onclick="compareString()">
+                </p>
+            </form>
+            <p id="ans1"></p>
+        </div>
+        <div class="content" style="visibility: hidden;" id="Mass">
+            <h4>Максимальное и минимальное значение в массиве из 5 элементов</h4>
+            <form id="formid">
+                <p>Введите массив
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                </p>
+            </form>
+            <input type="button" value="Отправить" onclick="calculateMass()">
+            <p id="ans2a"></p>
+            <p id="ans2b"></p>
+        </div>
+        <div class="content" style="visibility: hidden;" id="Timer">
+            <h2>Таймер</h2>
+            <p>
+            <span id="seconds">00</span><span class="dots">:</span><span id="tens">00</span>
+            </p>
+            <button id="button-start">Начать</button>
+            <button id="button-stop">Стоп</button>
+            <button id="button-reset">Сброс</button>
+
+        </div>
+        <script src="js/script.js"></script>
+        <div class="content" style="visibility: hidden;" id="Test">
+            <div class="quiz__head">
+                <div class="head__content" id="head">.</div>
+            </div>
+            <div class="quiz__body">
+                <div class="buttons">
+                    <div class="buttons__content" id="buttons">
+                        <button class="button">Default button</button><br>
+                        <button class="button button_wrong">Wrong answer</button><br>
+                        <button class="button button_correct">Correct answer</button><br>
+                        <button class="button button_passive">Unclicked button</button><br>
+                    </div>
+                </div>
+
+                <div class="quiz__footer">
+                    <div class="footer__content" id="pages">0 / 0</div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <div class="container" style="visibility: hidden;" id="Miniature">
+    <img src="background.jpg" onclick="showMiniature()">
+    <div class="centered">
+        <div class="container">
+            <div class="t-c">
+                <div class="calendar">
+                    <div class="current">
+                        <div class="month"></div>
+                        <div class="date"></div>
+                        <div class="year"></div>
+                </div>
+                    <div class="datelist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-left"><p id="top-left"></p></div>
+    <div class="top-right"><p id="top-right"></p></div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
