@@ -2,133 +2,87 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <title>Практическая работа № 1, Рамазанов П.А.</title>
+        <title>Практическая работа № 2, Рамазанов П.А.</title>
 	 </head>
     <body>
         <script>
-			/* // Task 0.
-			let a = 10;
-			let type = typeof(a);
-			if (type === "number") {
-				document.write(a + " is number");
-			} else if (type === "string") {
-				document.write(a + " is string");
-			} else if (type === "undefined") {
-				document.write(a + " is undefined");
-			}
-			else {
-				document.write(a + " is boolean");
-			} */
-			
 			/* // Task 1.
-			let zodiac = prompt();
-			switch (zodiac.toLowerCase()) {
-				case "овен":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "телец":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "близнецы":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "рак":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "лев":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "дева":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "скорпион":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "стрелец":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "козерог":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "водолей":
-					alert("Hello, " + zodiac + "!");
-					break;
-				case "рыбы":
-					alert("Hello, " + zodiac + "!");
-					break;
-				default:
-					break;
-			} */
+			const arr1 = new Array(1, 3, 5, 7, 9, 11);
+			const arr2 = [1, 3, 6, 8, 10, 12];
+			const arr3 = Array.of(1, 3, 7, 9, 11, 13); */
 			
 			/* // Task 2.
-			document.write("using for:<br>");
-			for (let i = 1; i <= 40; i++) {
-				if (i < 40)
-					document.write(i + ", ");
-				else 
-					document.write(i);
+			document.write("before: " + arr2[5] + "<br>");
+			arr2[5] = 50;
+			document.write("after: " + arr2[5]); */
+			
+			/* // Task 3 + 4.
+			for (let i = 0; i < arr2.length; i++) {
+				document.write(arr2[i] + " ");
 			}
-			document.write("<br>");
-			
-			document.write("using while:<br>");
-			let j = 1;
-			while (j <= 40) {
-				if (j < 40)
-					document.write(j + ", ");
-				else 
-					document.write(j);
-				j++;
-			}
-			document.write("<br>");
-			
-			document.write("using do while:<br>");
-			let k = 1;
-			do {
-				if (k < 40)
-					document.write(k + ", ");
-				else 
-					document.write(k);
-				k++;
-			}
-			while (k <= 40); */
-			
-			/* // Task 3.
-			while (true) {
-				alert("you've got a virus");
-			} */
-			
-			/* // Task 4.
-			while (true) {
-				let num = Number(prompt());
-				if (num > 5) {
-					alert("Congratulations!");
-					break;
-				}
-				else {
-					alert("Enter corretctly number (> 5)!");
-				}
-			} */
+			document.write("<br> arr2 length: " + arr2.length); */
 			
 			/* // Task 5.
-			for (let i = 8; i <= 20; i++) {
-				if (i % 2 == 0) {
-					if (i == 20)
-						document.write(i);
-					else 
-						document.write(i + ", ");
-				}
+			const newArr = [...arr1, ...arr2];
+			document.write("new arr:<br>");
+			for (let i = 0; i < newArr.length; i++) {
+				document.write(newArr[i] + " ");
+			}
+			document.write("<br><br>");
+			
+			// Task 6, 7.
+			let lastElement = newArr.pop();
+			document.write("pop element (1) is " + lastElement + "<br>");
+			
+			document.write("new arr (1):<br>");
+			for (let i = 0; i < newArr.length; i++) {
+				document.write(newArr[i] + " ");
+			}
+			document.write("<br><br>");
+			
+			lastElement = newArr.pop();
+			document.write("pop element (2) is " + lastElement + "<br>");
+			
+			document.write("new arr (2):<br>");
+			for (let i = 0; i < newArr.length; i++) {
+				document.write(newArr[i] + " ");
+			}
+			document.write("<br><br>");
+			
+			// Task 8.
+			let newElement = 50;
+			document.write("new first element is " + newElement + "<br>");
+			newArr.unshift(newElement);
+			document.write("new arr (3):<br>");
+			for (let i = 0; i < newArr.length; i++) {
+				document.write(newArr[i] + " ");
 			} */
 			
-			// Task 6.
-			for (let i = 1; i <= 7; i++) {
-				if (i % 2 != 0) {
-					if (i == 5)
-						continue;
-					if (i == 7)
-						document.write(i);
-					else 
-						document.write(i + ", ");
-				}
+			/* // Task 9.
+			let now = new Date();
+			alert(now); */
+			
+			/* // Task 10.
+			const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+			const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+							"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+             
+			let myDate = new Date();
+			let fullDate = "Сегодня: " + myDate.getDate() + " " + months[myDate.getMonth()] + 
+                " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
+			alert(fullDate); */
+			
+			// Task 11.
+			let num1 = getRandomInt();
+			let num2 = getRandomInt();
+			alert(num1 + " * " + num2 + " = " + Prod(num1, num2));
+			
+			function getRandomInt() {
+				return Math.floor(Math.random() * 50);
+			}
+			
+			function Prod(n1, n2) {
+				return n1 * n2;
 			}
 		</script>
 	</body>
